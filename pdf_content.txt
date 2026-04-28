@@ -1,0 +1,127 @@
+=== PAGE 1 ===
+PROJEKTNI ZADATAK IZ PREDMETA RAZVOJ MOBILNIH APLIKACIJA
+Predmet: Razvoj mobilnih aplikacija
+Razred: 4. razred gimnazije, IT smjer
+Tehnologija: Flutter / Dart
+1. CILJ PROJEKTA
+Cilj ovog projektnog zadatka je da učenici samostalno razviju potpuno funkcionalnu mobilnu
+aplikaciju koristeći Flutter framework i Dart programski jezik. Kroz izradu projekta, učenici
+će primijeniti sve funkcionalnosti koje su obrađene tokom nastave: kreiranje modela
+podataka, unos i validaciju podataka, prikaz liste sa statistikom, brisanje i uređivanje
+sadržaja, te internacionalizaciju aplikacije.
+2. ODABIR TEME APLIKACIJE
+Učenici samostalno biraju temu svoje aplikacije. Tema mora biti takva da omogućava
+implementaciju svih funkcionalnosti navedenih u zadacima.
+Prije početka izrade, učenici su dužni konsultovati se sa nastavnikom kako bi potvrdili da je
+odabrana tema prikladna.
+3. ZADACI
+Zadatak 1: Plan aplikacije
+Napišite kratak plan aplikacije koji sadrži sljedeće informacije:
+Stavka Opis
+Naziv Naziv vaše aplikacije
+aplikacije
+Svrha Koji problem aplikacija rješava i ko je ciljna
+aplikacije grupa
+Tip podataka Koje podatke aplikacija čuva i obrađuje
+Kategorije Minimalno 4 kategorije za grupiranje
+podataka
+Zadatak 2: Model podataka
+U mapi lib/models kreirajte odgovarajuće klase prema potrebama vaše aplikacije.
+Model podataka može uključivati (ali nije ograničen na sljedeće):
+● Enum (kategorije, prioriteti, statusi, tipovi i sl.)
+● Getteri
+● Metoda copyWith
+
+=== PAGE 2 ===
+● Helper klase sa statičkim metodama
+● Vizualizacija podataka (grafikoni, chartovi)
+● Sortiranje podataka
+● Pretraga podataka
+● Izvoz podataka (CSV, PDF i sl.)
+Zadatak 3: Ekran za unos podataka
+Kreirajte formu za unos podataka koja sadrži:
+1. Polja za unos – sva polja koja odgovaraju svojstvima vaše glavne klase (naslov,
+datum, kategorija, bilješka, dodatna svojstva)
+2. Validaciju unosa:
+● Obavezna polja ne smiju biti prazna
+● Numeričke vrijednosti moraju biti validne (npr. veće od nule ako to ima
+smisla)
+● Prikaz greške ispod polja kada validacija ne prođe
+● Dugme za spremanje onemogućeno dok sva polja nisu validna
+3. Povratak podataka:
+● Generiranje jedinstvenog ID-a (koristeći Uuid().v4() ili
+DateTime.now().toString())
+● Vraćanje kreirane stavke na prethodni ekran koristeći Navigator.pop
+Zadatak 4: Glavni ekran
+Kreirajte glavni ekran aplikacije koji sadrži:
+1. Listu svih unesenih podataka – prikazanu pomoću ListView.builder
+2. Dugme za dodavanje – u AppBar-u koje otvara ekran za unos
+3. Statistički pregled – na vrhu ekrana prikazati relevantne informacije prilagođene temi
+(npr. ukupna suma, prosjek, broj stavki u tekućem mjesecu, pregled po kategorijama i
+sl.)
+Zadatak 5: Brisanje i uređivanje
+1. Brisanje:
+● Implementirati brisanje povlačenjem ulijevo koristeći Dismissible widget
+● Dodati vizualnu indikaciju (npr. crvenu pozadinu) prilikom povlačenja
+● Prije brisanja prikazati dialog za potvrdu radnje
+2. Uređivanje:
+● Dodati ikonu za uređivanje na svaku stavku u listi
+● Klikom na ikonu otvoriti ekran za unos sa popunjenim poljima postojećih
+podataka
+● Nakon uređivanja, ažurirati listu sa izmijenjenim podacima
+Zadatak 6: Lokalizacija
+
+=== PAGE 3 ===
+1. Konfiguracija:
+● Dodati potrebne dependencyje u pubspec.yaml
+● Kreirati l10n.yaml fajl u rootu projekta
+● Kreirati mapu lib/l10n
+2. ARB fajlovi:
+● app_en.arb – za engleski jezik
+● app_bs.arb – za bosanski jezik
+● Prevesti sve tekstove u aplikaciji (naslove, labele, poruke, dugmad)
+3. Implementacija:
+● Podesiti MaterialApp da koristi lokalizaciju
+● Zamijeniti sve hardkodirane tekstove sa
+AppLocalizations.of(context)!.nazivKljuca
+4. Promjena jezika:
+● Dodati PopupMenuButton u AppBar za odabir jezika
+● Implementirati promjenu jezika u hodu
+4. TEHNIČKA DOKUMENTACIJA
+Svaki par je dužan predati tehničku dokumentaciju u PDF formatu koja sadrži sljedeće
+cjeline:
+Cjelina Sadržaj
+1. Uvod Naziv aplikacije, svrha, ciljna grupa
+2. Plan aplikacije Tabela sa nazivom, svrhom, tipom podataka i
+kategorijama
+3. Model podataka Opis klasa, enum-a, svojstava i metoda
+4. Opis ekrana Opis glavnog ekrana i ekrana za unos sa
+screenshotovima
+5. Lokalizacija Spisak podržanih jezika i način promjene jezika
+6. Uputstvo za Koraci za kloniranje i pokretanje aplikacije
+pokretanje
+7. Zaključak Osnovni zaključci i izazovi tokom izrade
+Minimalan broj stranica: 10 (bez naslovne strane)
+5. GITHUB I PREDAJA
+Stavka Zahtjev
+Izvorni kod Obavezno postaviti na javni GitHub repozitorij
+README U README fajlu navesti naziv aplikacije, opis, upute za pokretanje i spisak
+korištenih paketa
+Link Link ka GitHub repozitoriju obavezno priložiti u tehničkoj dokumentaciji
+Snimci Minimalno 5 screenshotova aplikacije (umetnuti u tehničku dokumentaciju)
+ekrana
+Predaja Tehnička dokumentacija (PDF) + link ka GitHub repozitoriju
+
+=== PAGE 4 ===
+6. KRITERIJI OCJENJIVANJA
+Kriterij Bodovi
+Plan aplikacije (Zadatak 1) 10
+Model podataka (Zadatak 2) 15
+Ekran za unos i validacija (Zadatak 3) 15
+Glavni ekran i statistika (Zadatak 4) 15
+Brisanje i uređivanje (Zadatak 5) 15
+Lokalizacija (Zadatak 6) 15
+Dodatne funkcionalnosti (minimalno 2 iz Zadatka 2) 10
+Organizacija koda, dokumentacija i GitHub predaja 5
+UKUPNO 100
+
